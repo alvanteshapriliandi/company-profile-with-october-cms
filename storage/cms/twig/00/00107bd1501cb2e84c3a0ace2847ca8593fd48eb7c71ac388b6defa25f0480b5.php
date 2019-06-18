@@ -59,28 +59,34 @@ class __TwigTemplate_70b5228e38e2f5193b2f830fd73ac9d6673e635f53b3cfac88fcb554828
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("navbar"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
         // line 20
-        echo "
-  ";
+        echo "\t
+\t";
         // line 21
-        $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("jumbotron"        , $context['__cms_partial_params']        , true        );
-        unset($context['__cms_partial_params']);
-        // line 22
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, false, 21), "filename", [], "any", false, false, false, 21) == "home.htm")) {
+            // line 22
+            echo "      ";
+            $context['__cms_partial_params'] = [];
+            echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("carousel"            , $context['__cms_partial_params']            , true            );
+            unset($context['__cms_partial_params']);
+            // line 23
+            echo "    ";
+        }
+        // line 24
         echo "
   <section id=\"page\" class=\"container m-b-3\">
     ";
-        // line 24
+        // line 26
         echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
-        // line 25
+        // line 27
         echo "  </section>
 
     <script src=\"";
-        // line 27
+        // line 29
         echo $this->extensions['Cms\Twig\Extension']->themeFilter([0 => "assets/vendor/jquery/dist/jquery.min.js", 1 => "assets/vendor/tether/dist/js/tether.min.js", 2 => "assets/vendor/bootstrap/dist/js/bootstrap.min.js", 3 => "assets/vendor/wow/dist/wow.min.js", 4 => "assets/vendor/holderjs/holder.min.js", 5 => "assets/vendor/plyr/dist/plyr.js", 6 => "assets/js/scripts.js"]);
-        // line 35
+        // line 37
         echo "\"></script>
     ";
-        // line 36
+        // line 38
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="'. Request::getBasePath()
@@ -95,11 +101,11 @@ class __TwigTemplate_70b5228e38e2f5193b2f830fd73ac9d6673e635f53b3cfac88fcb554828
         echo '<link rel="stylesheet" property="stylesheet" href="'. Request::getBasePath()
                     .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 37
+        // line 39
         echo "    ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 38
+        // line 40
         echo "  </body>
 </html>";
     }
@@ -116,7 +122,7 @@ class __TwigTemplate_70b5228e38e2f5193b2f830fd73ac9d6673e635f53b3cfac88fcb554828
 
     public function getDebugInfo()
     {
-        return array (  103 => 38,  99 => 37,  84 => 36,  81 => 35,  79 => 27,  75 => 25,  73 => 24,  69 => 22,  65 => 21,  62 => 20,  58 => 19,  52 => 15,  49 => 14,  46 => 13,  44 => 8,  35 => 1,);
+        return array (  109 => 40,  105 => 39,  90 => 38,  87 => 37,  85 => 29,  81 => 27,  79 => 26,  75 => 24,  72 => 23,  67 => 22,  65 => 21,  62 => 20,  58 => 19,  52 => 15,  49 => 14,  46 => 13,  44 => 8,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -140,8 +146,10 @@ class __TwigTemplate_70b5228e38e2f5193b2f830fd73ac9d6673e635f53b3cfac88fcb554828
   <body>
 
 \t{% partial 'navbar' %}
-
-  {% partial 'jumbotron' %}
+\t
+\t{% if this.page.filename == 'home.htm' %}
+      {% partial 'carousel' %}
+    {% endif %}
 
   <section id=\"page\" class=\"container m-b-3\">
     {% page %}

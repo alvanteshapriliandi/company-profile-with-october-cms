@@ -1,4 +1,4 @@
-1560825870a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1085:"==
+1560827012a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:1188:"==
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,8 +18,10 @@
   <body>
 
 	{% partial 'navbar' %}
-
-  {% partial 'jumbotron' %}
+	
+	{% if this.page.filename == 'home.htm' %}
+      {% partial 'carousel' %}
+    {% endif %}
 
   <section id="page" class="container m-b-3">
     {% page %}
@@ -37,7 +39,7 @@
     {% framework extras %}
     {% scripts %}
   </body>
-</html>";s:5:"mtime";i:1560825156;s:6:"markup";s:1082:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1560826408;s:6:"markup";s:1185:"<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -56,8 +58,10 @@
   <body>
 
 	{% partial 'navbar' %}
-
-  {% partial 'jumbotron' %}
+	
+	{% if this.page.filename == 'home.htm' %}
+      {% partial 'carousel' %}
+    {% endif %}
 
   <section id="page" class="container m-b-3">
     {% page %}

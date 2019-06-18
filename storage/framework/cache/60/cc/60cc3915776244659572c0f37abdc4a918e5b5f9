@@ -1,30 +1,29 @@
-1560825870a:1:{s:10:"navbar.htm";a:6:{s:8:"fileName";s:10:"navbar.htm";s:7:"content";s:620:"description = "Navigation bar"
+1560827094a:1:{s:10:"navbar.htm";a:6:{s:8:"fileName";s:10:"navbar.htm";s:7:"content";s:623:"description = "Navigation bar"
 ==
 <section id="navbar" class="m-b-3">
 	<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="{{ 'features'|page }}">Bootstrap 4</a>
+			<a class="navbar-brand" href="{{ 'home'|page }}">Our Company</a>
 			<ul class="nav navbar-nav pull-xs-right">
-				<li class="nav-item{{ this.page.baseFileName == 'features' ? ' active' }}">
-					<a class="nav-link" href="{{ 'features'|page }}">Features</a>
+				<li class="nav-item{{ this.page.baseFileName == 'about' ? ' active' }}">
+					<a class="nav-link" href="{{ 'about'|page }}">About</a>
 				</li>
-				<li class="nav-item{{ this.page.baseFileName == 'author' ? ' active' }}">
-					<a class="nav-link" href="{{ 'author'|page }}">Author</a>
+				<li class="nav-item{{ this.page.baseFileName == 'contact' ? ' active' }}">
+					<a class="nav-link" href="{{ 'contact'|page }}">Contact</a>
 				</li>
 			</ul>
 		</div>
 	</nav>
-</section>
-";s:5:"mtime";i:1560825156;s:6:"markup";s:585:"<section id="navbar" class="m-b-3">
+</section>";s:5:"mtime";i:1560826491;s:6:"markup";s:589:"<section id="navbar" class="m-b-3">
 	<nav class="navbar navbar-dark bg-inverse navbar-fixed-top">
 		<div class="container">
-			<a class="navbar-brand" href="{{ 'features'|page }}">Bootstrap 4</a>
+			<a class="navbar-brand" href="{{ 'home'|page }}">Our Company</a>
 			<ul class="nav navbar-nav pull-xs-right">
-				<li class="nav-item{{ this.page.baseFileName == 'features' ? ' active' }}">
-					<a class="nav-link" href="{{ 'features'|page }}">Features</a>
+				<li class="nav-item{{ this.page.baseFileName == 'about' ? ' active' }}">
+					<a class="nav-link" href="{{ 'about'|page }}">About</a>
 				</li>
-				<li class="nav-item{{ this.page.baseFileName == 'author' ? ' active' }}">
-					<a class="nav-link" href="{{ 'author'|page }}">Author</a>
+				<li class="nav-item{{ this.page.baseFileName == 'contact' ? ' active' }}">
+					<a class="nav-link" href="{{ 'contact'|page }}">Contact</a>
 				</li>
 			</ul>
 		</div>

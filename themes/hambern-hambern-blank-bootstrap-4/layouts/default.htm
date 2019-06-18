@@ -18,8 +18,10 @@
   <body>
 
 	{% partial 'navbar' %}
-
-  {% partial 'jumbotron' %}
+	
+	{% if this.page.filename == 'home.htm' %}
+      {% partial 'carousel' %}
+    {% endif %}
 
   <section id="page" class="container m-b-3">
     {% page %}
